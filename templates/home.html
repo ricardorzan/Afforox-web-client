@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 {% block title %} Afforox {% endblock title %}
 {% block content %}
-
+{% load static %}
+{% block estilos-home %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 <main>
-
-    <section class="bg-light py-5 border-bottom">
+    <section class="bg-restaurant py-5 border-bottom">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
                 <div class="col-10 col-sm-8 col-lg-6 ">
                     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Dar de alta mi negocio</a>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Gestión segura de aforo sin contacto</h1>
-                    <p class="lead mb-4"> Control de aforo automático, seguro y en tiempo real para
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Gestión segura de aforo sin contacto</h1>
+                    <p class="lead mb-4 text-white"> Control de aforo automático, seguro y en tiempo real para
                         todo tipo de negocios mediante QR.
                     </p>
                 </div>
@@ -22,7 +24,7 @@
 
     <div class="b-example-divider"></div>
 
-    <section class="bg-body py-5 border-bottom">
+    <section class="bg-white py-5 border-bottom">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Agiliza los procesos de seguridad en tus instalaciones</h1>
+                    <h2 class="display-5 fw-bold lh-1 mb-3">Agiliza los procesos de seguridad en tus instalaciones</h2>
                     <p class="lead mb-4">Afforox es una App que se encarga de solucionar de forma ágil y eficaz el
                         cumplimiento de las normativas y protocolos de prevención frente al COVID-19 relacionadas con el
                         aforo.</p>
@@ -67,7 +69,7 @@
                                          alt="..."/>
                                 </div>
                             </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center">Control</div>
+                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Control</div>
                             <div class="col-lg-auto">
                                 <p class="lead mb-4 text-center">En tiempo real y de manera automática en tus
                                     instalaciones, desde
@@ -86,10 +88,21 @@
                                          alt="..."/>
                                 </div>
                             </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center">Acceso</div>
+                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Acceso</div>
                             <div class="col-lg-auto">
                                 <p class="lead mb-4 text-center">Selecciona tus instalaciones y asígnales un código QR
-                                    visible.
+         h1, h2 {
+    font-family: fontTitle;
+}
+
+p {
+    font-family: fontSubtitle;
+}
+
+span, a, label {
+    font-family: fontNormalText;
+}
+                           visible.
                                     Restringe accesos o permítelos.</p>
                             </div>
                         </div>
@@ -105,7 +118,7 @@
                                          alt="..."/>
                                 </div>
                             </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center">Histórico</div>
+                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Histórico</div>
                             <div class="col-lg-auto">
                                 <p class="lead mb-4 text-center">Consulta gráficos con los días mas saturados en tu
                                     negocio y demás
@@ -198,15 +211,15 @@
 
     <div class="b-example-divider"></div>
 
-    <section class="bg-light py-5 border-bottom">
+    <section class="bg-white py-5 border-bottom">
         <div class="container px-5 my-5">
             <div class="py-5 text-center">
                 <h1 class="display-5 fw-bold">¿Cómo puedo dar de alta mi negocio?</h1>
             </div>
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 order-first order-lg-last">
-                    <img class="img-fluid rounded mb-5 mb-lg-0"
-                         src="https://dummyimage.com/600x400/343a40/6c757d"
+                <div class="col-lg-6 order-first order-lg-last ">
+                    <img class="img-fluid rounded mb-5 mb-lg-0 mx-auto d-block"
+                         src="{% static 'resources/logo_afforox.png' %}"
                          alt="..."/>
                 </div>
                 <div class="col-lg-6">

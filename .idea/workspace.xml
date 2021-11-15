@@ -5,11 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="- Se agregaron los requerimientos">
-      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/Inter-VariableFont_slnt,wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/Inter/static/Inter-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo ExtraLight.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Normal.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo SemiBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo Thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/promo-font/Borutta Group - Promo UltraLight.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/fonts/vag_rounded/vag-rounded.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/logo_afforox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/restaurant_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/resources/search_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/afforox/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/afforox/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +55,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,20 +87,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/resources/fonts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="ide.date.format" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/resources/fonts" />
+      <recent name="$PROJECT_DIR$/static/resources" />
+      <recent name="$PROJECT_DIR$/static/bootstrap" />
+      <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/resources/fonts/vag_rounded" />
+      <recent name="$PROJECT_DIR$/static/resources/fonts" />
+      <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -89,6 +131,9 @@
       <workItem from="1636208405369" duration="10000" />
       <workItem from="1636219194671" duration="454000" />
       <workItem from="1636387786010" duration="2934000" />
+      <workItem from="1636954452796" duration="4028000" />
+      <workItem from="1636993435624" duration="649000" />
+      <workItem from="1636994097104" duration="8143000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>

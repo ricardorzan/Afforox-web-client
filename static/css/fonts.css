@@ -1,0 +1,26 @@
+.afforox-title {
+    font-family: fontTitle;
+}
+
+.afforox-subtitle {
+    font-family: fontSubtitle;
+}
+
+.afforox-normal-text {
+    font-family: fontNormalText;
+}
+
+@font-face {
+    font-family: fontTitle;
+    src: url("../resources/fonts/vag_rounded/vag-rounded.otf");
+}
+
+@font-face {
+    font-family: fontSubtitle;
+    src: url("../resources/fonts/promo-font/Borutta Group - Promo Normal.otf");
+}
+
+@font-face {
+    font-family: fontNormalText;
+    src: url("../resources/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
