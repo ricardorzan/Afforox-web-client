@@ -39,7 +39,8 @@ class SignUpUserForm(forms.ModelForm):
             'fecha_de_nacimiento': DateInput(attrs={'class': 'form-control'}),
             'edad': forms.TextInput(attrs={'class': 'form-control'}),
             'número_de_télefono': forms.TextInput(attrs={'class': 'form-control'}),
-            'contraseña': forms.PasswordInput(attrs={'class': 'form-control'})
+            'contraseña': forms.PasswordInput(attrs={'class': 'form-control'}),
+            'foto_de_perfil': forms.FileInput(attrs={'class': 'form-control'})
         }
         error_messages = {
             'nombre_completo': {
@@ -59,6 +60,9 @@ class SignUpUserForm(forms.ModelForm):
             },
             'contraseña': {
                 'required': _('Este campo es requerido')
+            },
+            'foto_de_perfil': {
+                'required': _('Este campo es requerido')
             }
         }
 
@@ -68,9 +72,9 @@ class SignUpAddressForm(forms.ModelForm):
         exclude = []
         widgets = {
             'calle': forms.TextInput(attrs={'class': 'form-control'}),
-            'país': forms.TextInput(attrs={'class': 'form-control'}),
-            'ciudad': forms.TextInput(attrs={'class': 'form-control'}),
-            'estado': forms.TextInput(attrs={'class': 'form-control'}),
+            'país': forms.Select(attrs={'class': 'form-control'}),
+            'ciudad': forms.Select(attrs={'class': 'form-control'}),
+            'estado': forms.Select(attrs={'class': 'form-control'}),
             'colonia': forms.TextInput(attrs={'class': 'form-control'}),
             'número_exterior': forms.TextInput(attrs={'class': 'form-control'}),
             'número_interior':  forms.TextInput(attrs={'class': 'form-control'})

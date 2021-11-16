@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Usuario(models.Model):
@@ -9,17 +10,22 @@ class Usuario(models.Model):
     edad = models.CharField(max_length=20)
     número_de_télefono = models.CharField(max_length=20)
     contraseña = models.CharField(max_length=50)
+    foto_de_perfil = models.ImageField(upload_to='profile_pictures', blank=True)
+
 
 class Pais(models.Model):
     país = models.CharField(max_length=20)
+
 
 class Estado(models.Model):
     estado = models.CharField(max_length=20)
     país = models.ForeignKey(Pais, on_delete=models.CASCADE)
 
+
 class Ciudad(models.Model):
     ciudad = models.CharField(max_length=20)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
+
 
 class Domicilio(models.Model):
     país = models.CharField(max_length=20)

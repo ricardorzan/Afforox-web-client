@@ -4,6 +4,8 @@
 {% load static %}
 {% block estilos-login %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
 {% endblock %}
 <body>
 <div class="row align-items-stretch">
@@ -12,6 +14,12 @@
     <div class="col bg-white p-4">
         <h2 class="fw-bold text-center pt-5">¡Bienvenido a Afforox!</h2>
         <h3 class="fw-light text-center pb-5">Completa tu registro para crear tu cuenta</h3>
+
+        <div class="w-50 d-grid mx-auto d-block mb-5">
+            <label class="form-label">{{ form_user.foto_de_perfil.label }}</label>
+            {{ form_user.foto_de_perfil }}
+        </div>
+
         <form class="w-75 mx-auto mb-5">
             <div class="row mx-auto mb-3">
                 <div class="col">
