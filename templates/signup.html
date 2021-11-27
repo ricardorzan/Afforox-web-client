@@ -16,75 +16,76 @@
         <h3 class="fw-light text-center pb-5">Completa tu registro para crear tu cuenta</h3>
 
         <div class="w-50 d-grid mx-auto d-block mb-5">
-            <label class="form-label">{{ form_user.foto_de_perfil.label }}</label>
-            {{ form_user.foto_de_perfil }}
+            <label class="form-label">{{ form.fotoPerfil.label }}</label>
+            {{ form.fotoPerfil }}
         </div>
 
-        <form class="w-75 mx-auto mb-5">
+        <form method="post" class="w-75 mx-auto mb-5">
+            {% csrf_token %}
             <div class="row mx-auto mb-3">
                 <div class="col">
-                    <label class="form-label">{{ form_user.nombre_completo.label }}</label>
-                    {{ form_user.nombre_completo }}
+                    <label class="form-label">{{ form.nombreCompleto.label }}</label>
+                    {{ form.nombreCompleto }}
                 </div>
                 <div class="col">
-                    <label class="form-label">{{ form_user.correo_electrónico.label }}</label>
-                    {{ form_user.correo_electrónico }}
+                    <label class="form-label">{{ form.correoElectronico.label }}</label>
+                    {{ form.correoElectronico }}
                 </div>
             </div>
             <div class="row mx-auto mb-3">
                 <div class="col">
-                    <label class="form-label">{{ form_user.fecha_de_nacimiento.label }}</label>
-                    {{ form_user.fecha_de_nacimiento }}
+                    <label class="form-label">{{ form.fechaNacimiento.label }}</label>
+                    {{ form.fechaNacimiento }}
                 </div>
                 <div class="col">
-                    <label class="form-label">{{ form_user.edad.label }}</label>
-                    {{ form_user.edad }}
-                </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form_user.número_de_télefono.label }}</label>
-                    {{ form_user.número_de_télefono }}
-                </div>
-                <div class="col">
-                    <label class="form-label ">{{ form_address.país.label }}</label>
-                    {{ form_address.país }}
+                    <label class="form-label">{{ form.edad.label }}</label>
+                    {{ form.edad }}
                 </div>
             </div>
             <div class="row mx-auto mb-3">
                 <div class="col">
-                    <label class="form-label ">{{ form_address.estado.label }}</label>
-                    {{ form_address.estado }}
+                    <label class="form-label ">{{ form.telefono.label }}</label>
+                    {{ form.telefono }}
                 </div>
                 <div class="col">
-                    <label class="form-label ">{{ form_address.ciudad.label }}</label>
-                    {{ form_address.ciudad }}
-                </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form_address.calle.label }}</label>
-                    {{ form_address.calle }}
-                </div>
-                <div class="col">
-                    <label class="form-label ">{{ form_address.número_interior.label }}</label>
-                    {{ form_address.número_interior }}
+                    <label class="form-label ">{{ form.pais.label }}</label>
+                    {{ form.pais }}
                 </div>
             </div>
             <div class="row mx-auto mb-3">
                 <div class="col">
-                    <label class="form-label ">{{ form_address.número_exterior.label }}</label>
-                    {{ form_address.número_exterior }}
+                    <label class="form-label ">{{ form.estado.label }}</label>
+                    {{ form.estado }}
                 </div>
                 <div class="col">
-                    <label class="form-label ">{{ form_address.colonia.label }}</label>
-                    {{ form_address.colonia }}
+                    <label class="form-label ">{{ form.ciudad.label }}</label>
+                    {{ form.ciudad }}
                 </div>
             </div>
-            <div class="row mx-auto mb-5">
+            <div class="row mx-auto mb-3">
                 <div class="col">
-                    <label class="form-label ">{{ form_user.contraseña.label }}</label>
-                    {{ form_user.contraseña }}
+                    <label class="form-label ">{{ form.calle.label }}</label>
+                    {{ form.calle }}
+                </div>
+                <div class="col">
+                    <label class="form-label ">{{ form.numeroInterior.label }}</label>
+                    {{ form.numeroInterior }}
+                </div>
+            </div>
+            <div class="row mx-auto mb-3">
+                <div class="col">
+                    <label class="form-label ">{{ form.numeroExterior.label }}</label>
+                    {{ form.numeroExterior }}
+                </div>
+                <div class="col">
+                    <label class="form-label ">{{ form.colonia.label }}</label>
+                    {{ form.colonia }}
+                </div>
+            </div>
+            <div class="row mx-auto mb-4">
+                <div class="col">
+                    <label class="form-label ">{{ form.contrasenia.label }}</label>
+                    {{ form.contrasenia }}
                 </div>
                 <div class="col">
                     <label class="form-label ">Confirma tu contraseña</label>
@@ -92,13 +93,24 @@
                 </div>
             </div>
             <div class="row mx-auto">
+                {% if messages %}
+                <ul class="alert alert-danger" style="list-style: none;">
+                    {% for message in messages %}
+                    <li
+                            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="row mx-auto mt-2">
                 <div class="col">
                     <button type="button" onclick="window.history.go(-1); return false;"
                             class="btn btn-secondary w-75 float-end ">Regresar
                     </button>
                 </div>
                 <div class="col">
-                    <button type="submit" class="btn btn-primary w-75 ">Iniciar sesión</button>
+                    <button type="submit" class="btn btn-primary w-75 ">Registrarse</button>
                 </div>
             </div>
         </form>
