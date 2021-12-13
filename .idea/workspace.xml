@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en registrar usuario">
-      <change afterPath="$PROJECT_DIR$/templates/auth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+    <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/register_business.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/register_business.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register_business.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Afforox-web-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Afforox-web-client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/afforox/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/afforox/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,14 +32,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="Python Script" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -50,8 +72,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="20WFR9WZIHMzPsgcZY3D6YHx5F3" />
   <component name="ProjectViewState">
@@ -59,20 +84,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite&#10;sqlserver" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;postgresql&#10;sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunConfigurationTargetLRU" value="32075ede-c505-4820-8367-e636be4fd0cf/database/&quot;afforox&quot;" />
     <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="PostgreSQL&#10;TSQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="TSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -91,7 +119,28 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://127.0.0.1:8000/">
+    <configuration name="Afforox" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Afforox-web-client" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
   </component>
@@ -117,7 +166,19 @@
       <workItem from="1637879211746" duration="7508000" />
       <workItem from="1638037588512" duration="3117000" />
       <workItem from="1638040763977" duration="38000" />
-      <workItem from="1638041359712" duration="15330000" />
+      <workItem from="1638041359712" duration="16009000" />
+      <workItem from="1638057873958" duration="17000" />
+      <workItem from="1638218060279" duration="1654000" />
+      <workItem from="1638294483917" duration="22000" />
+      <workItem from="1638364317751" duration="1850000" />
+      <workItem from="1638411985962" duration="10000" />
+      <workItem from="1638855094504" duration="1380000" />
+      <workItem from="1638891092790" duration="9584000" />
+      <workItem from="1638901174927" duration="3251000" />
+      <workItem from="1639247965709" duration="22295000" />
+      <workItem from="1639344515309" duration="1024000" />
+      <workItem from="1639345555161" duration="13935000" />
+      <workItem from="1639361783130" duration="4504000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>
@@ -147,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637002373239</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
+      <created>1638057044688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638057044688</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,13 +231,13 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
     <MESSAGE value="-Se agregó bootstrap css y js&#10;-Se agregó el Homepage como estructura base" />
     <MESSAGE value="- Se agregaron los requerimientos" />
     <MESSAGE value="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse" />
+    <MESSAGE value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
   </component>
 </project>

@@ -1,41 +1,49 @@
 {% extends 'base.html' %}
 {% block title %} Iniciar sesión {% endblock title %}
 {% block content %}
-{% load static %}
-{% block estilos-login %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
-{% endblock %}
-<body>
-<div class="container w-75 bg-light mt-5 rounded shadow">
-    <div class="row align-items-stretch">
-        <div class="col bg-white p-5 rounded-start left-side">
-            <h2 class="fw-bold text-center py-5"> Inicio de sesión </h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="mb-4">
-                    <input type="checkbox" class="form-check-input" id="connected">
-                    <label for="connected" class="form-check-label">Mantenerme conectado</label>
+    {% load static %}
+    {% block estilos-login %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% endblock %}
+    <body>
+    <div class="container w-75 bg-light mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg-white p-5 rounded-start left-side">
+                <h2 class="fw-bold text-center py-5"> Inicio de sesión </h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="row mx-auto">
+                        {% if messages %}
+                            <ul class="alert alert-danger" style="list-style: none;">
+                                {% for message in messages %}
+                                    <li
+                                            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                    <div class="my-3 text-center">
+                        <span><a href="#">¿Olvidaste tu contraseña?</a></span>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary w-75 mx-auto d-block">Iniciar sesión</button>
+                    </div>
+                    <div class="my-3 text-center">
+                        <span>¿Neceistas una cuenta? <a href="{% url 'signup' %}">Registrate</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded right-side">
+                <div class="text-center align-items-center pt-5 align-items-center mt-4">
+                    <img src="{% static 'resources/logo_afforox.png' %}" class="img-fluid pt-5">
+                    <h1 class="fw-bold mt-3">Afforox</h1>
+                    <h2 class="fw-light mt-4">Control en la nueva normalidad</h2>
                 </div>
-                <div class="my-3 text-center">
-                    <span><a href="#">¿Olvidaste tu contraseña?</a></span>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary w-75 mx-auto d-block">Iniciar sesión</button>
-                </div>
-                <div class="my-3 text-center">
-                    <span>¿Neceistas una cuenta? <a href="{% url 'signup' %}">Registrate</a></span>
-                </div>
-            </form>
-        </div>
-        <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded right-side">
-            <div class="text-center align-items-center pt-5 align-items-center mt-4">
-                <img src="{% static 'resources/logo_afforox.png' %}" class="img-fluid pt-5">
-                <h1 class="fw-bold mt-3">Afforox</h1>
-                <h2 class="fw-light mt-4">Control en la nueva normalidad</h2>
             </div>
         </div>
     </div>
-</div>
-</body>
+    </body>
 {% endblock content %}

@@ -1,10 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Cátalogo de negocios{% endblock title %}
+{% block content %}
+    {% load static %}
+    {% block estilos-main %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock %}
+    <body>
 
-</body>
-</html>
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center text-white">
+                        <form class="form-subscribe mt-5" id="contactForm">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control form-control-lg" id="emailAddress"
+                                           placeholder="Negocios"/>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <ul>
+                    {% for negocio in object_list %}
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- image-->
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                                <!-- details-->
+                                <div class="card-body p-4">
+                                    <!-- name-->
+                                    <h5 class="fw-bolder">El barco</h5>
+                                    <!-- data-->
+                                    <p class="cerrado">Cerrado</p>
+                                    Capacidad total: 40
+                                    <br>
+                                    Aforo actual: 30
+                                </div>
+                                <!-- actions-->
+                                <div class="row">
+                                    <div class="col mb-2 ms-4">
+                                        <div class="d-flex content-start text-warning ">
+                                            <a class="bi-star-fill"></a>
+                                            <a class="bi-star-fill"></a>
+                                            <a class="bi-star-fill"></a>
+                                            <a class="bi-star-fill"></a>
+                                            <a class="bi-star"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto me-4">
+                                        <div class="d-flex content-end text-warning">
+                                            <a class="bi-heart-fill"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </ul>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="cerrado">Cerrado</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart-fill"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- details-->
+                        <div class="card-body p-4">
+                            <!-- name-->
+                            <h5 class="fw-bolder">El barco</h5>
+                            <!-- data-->
+                            <p class="abierto">Abierto</p>
+                            Capacidad total: 40
+                            <br>
+                            Aforo actual: 30
+                        </div>
+                        <!-- actions-->
+                        <div class="row">
+                            <div class="col mb-2 ms-4">
+                                <div class="d-flex content-start text-warning ">
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                    <a class="bi-star-fill"></a>
+                                </div>
+                            </div>
+                            <div class="col-auto me-4">
+                                <div class="d-flex content-end text-warning">
+                                    <a class="bi-heart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

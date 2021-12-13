@@ -1,120 +1,120 @@
 {% extends 'base.html' %}
-{% block title %} Iniciar sesión {% endblock title %}
+{% block title %} Registrarse {% endblock title %}
 {% block content %}
-{% load static %}
-{% block estilos-login %}
-<link rel="stylesheet" href="{% static 'css/signup.css' %}">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
-{% endblock %}
-<body>
-<div class="row align-items-stretch">
-    <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
-    </div>
-    <div class="col bg-white p-4">
-        <h2 class="fw-bold text-center pt-5">¡Bienvenido a Afforox!</h2>
-        <h3 class="fw-light text-center pb-5">Completa tu registro para crear tu cuenta</h3>
-
-        <div class="w-50 d-grid mx-auto d-block mb-5">
-            <label class="form-label">{{ form.fotoPerfil.label }}</label>
-            {{ form.fotoPerfil }}
+    {% load static %}
+    {% block estilos-login %}
+        <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
+    {% endblock %}
+    <body>
+    <div class="row align-items-stretch">
+        <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
         </div>
+        <div class="col bg-white p-4">
+            <h2 class="fw-bold text-center pt-5">¡Bienvenido a Afforox!</h2>
+            <h3 class="fw-light text-center pb-5">Completa tu registro para crear tu cuenta</h3>
 
-        <form method="post" class="w-75 mx-auto mb-5">
-            {% csrf_token %}
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label">{{ form.nombreCompleto.label }}</label>
-                    {{ form.nombreCompleto }}
-                </div>
-                <div class="col">
-                    <label class="form-label">{{ form.correoElectronico.label }}</label>
-                    {{ form.correoElectronico }}
-                </div>
+            <div class="w-50 d-grid mx-auto d-block mb-5">
+                <label class="form-label">{{ form.fotoPerfil.label }}</label>
+                {{ form.fotoPerfil }}
             </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label">{{ form.fechaNacimiento.label }}</label>
-                    {{ form.fechaNacimiento }}
+
+            <form method="post" class="w-75 mx-auto mb-5">
+                {% csrf_token %}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label">{{ form.nombreCompleto.label }}</label>
+                        {{ form.nombreCompleto }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label">{{ form.correoElectronico.label }}</label>
+                        {{ form.correoElectronico }}
+                    </div>
                 </div>
-                <div class="col">
-                    <label class="form-label">{{ form.edad.label }}</label>
-                    {{ form.edad }}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label">{{ form.fechaNacimiento.label }}</label>
+                        {{ form.fechaNacimiento }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label">{{ form.edad.label }}</label>
+                        {{ form.edad }}
+                    </div>
                 </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form.telefono.label }}</label>
-                    {{ form.telefono }}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ form.telefono.label }}</label>
+                        {{ form.telefono }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ form.pais.label }}</label>
+                        {{ form.pais }}
+                    </div>
                 </div>
-                <div class="col">
-                    <label class="form-label ">{{ form.pais.label }}</label>
-                    {{ form.pais }}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ form.estado.label }}</label>
+                        {{ form.estado }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ form.ciudad.label }}</label>
+                        {{ form.ciudad }}
+                    </div>
                 </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form.estado.label }}</label>
-                    {{ form.estado }}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ form.calle.label }}</label>
+                        {{ form.calle }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ form.numeroInterior.label }}</label>
+                        {{ form.numeroInterior }}
+                    </div>
                 </div>
-                <div class="col">
-                    <label class="form-label ">{{ form.ciudad.label }}</label>
-                    {{ form.ciudad }}
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ form.numeroExterior.label }}</label>
+                        {{ form.numeroExterior }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ form.colonia.label }}</label>
+                        {{ form.colonia }}
+                    </div>
                 </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form.calle.label }}</label>
-                    {{ form.calle }}
+                <div class="row mx-auto mb-4">
+                    <div class="col">
+                        <label class="form-label ">{{ form.contrasenia.label }}</label>
+                        {{ form.contrasenia }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">Confirma tu contraseña</label>
+                        <input type="password" class="form-control">
+                    </div>
                 </div>
-                <div class="col">
-                    <label class="form-label ">{{ form.numeroInterior.label }}</label>
-                    {{ form.numeroInterior }}
+                <div class="row mx-auto">
+                    {% if messages %}
+                        <ul class="alert alert-danger" style="list-style: none;">
+                            {% for message in messages %}
+                                <li
+                                        {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
                 </div>
-            </div>
-            <div class="row mx-auto mb-3">
-                <div class="col">
-                    <label class="form-label ">{{ form.numeroExterior.label }}</label>
-                    {{ form.numeroExterior }}
+                <div class="row mx-auto mt-2">
+                    <div class="col">
+                        <button type="button" onclick="window.history.go(-1); return false;"
+                                class="btn btn-secondary w-75 float-end ">Regresar
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary w-75 ">Registrarse</button>
+                    </div>
                 </div>
-                <div class="col">
-                    <label class="form-label ">{{ form.colonia.label }}</label>
-                    {{ form.colonia }}
-                </div>
-            </div>
-            <div class="row mx-auto mb-4">
-                <div class="col">
-                    <label class="form-label ">{{ form.contrasenia.label }}</label>
-                    {{ form.contrasenia }}
-                </div>
-                <div class="col">
-                    <label class="form-label ">Confirma tu contraseña</label>
-                    <input type="password" class="form-control">
-                </div>
-            </div>
-            <div class="row mx-auto">
-                {% if messages %}
-                <ul class="alert alert-danger" style="list-style: none;">
-                    {% for message in messages %}
-                    <li
-                            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
-            <div class="row mx-auto mt-2">
-                <div class="col">
-                    <button type="button" onclick="window.history.go(-1); return false;"
-                            class="btn btn-secondary w-75 float-end ">Regresar
-                    </button>
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary w-75 ">Registrarse</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-</body>
+    </body>
 {% endblock content %}
