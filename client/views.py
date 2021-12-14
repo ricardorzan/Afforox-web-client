@@ -12,17 +12,30 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, FormView
 from .models import Usuario, Domicilio, Negocio, Sucursal, Sesion
 from .forms import (
-    LogInForm, SignUpForm, AuthForm, MainForm, BusinessForm, SucursalForm, DomicilioForm, HorarioGeneralForm
+    LogInForm,
+    AuthForm,
+    MainForm,
+    BusinessForm,
+    SucursalForm,
+    DomicilioForm,
+    HorarioGeneralForm,
+    UsuarioForm
 )
 
 # Create your views here.
 from django.views import View
 
-from .serializers import BusinessSerializer
+from .serializers import BusinessSerializer, UserSerializer
 
 
-def Homepage(request):
-    return render(request, "home.html")
+class Homepage(View):
+    template_name = "home.html"
+
+    def get(self, request):
+        return render(request, self.template_name)
+
+    def post(self, request):
+        return render(request, self.template_name)
 
 
 def About(request):
@@ -68,26 +81,40 @@ class LogInView(FormView):
             return reverse_lazy('main')
 
 
-class AccountCreateView(FormView):
-    form_class = SignUpForm
+class AccountCreateView(View):
     template_name = "signup.html"
-    success_url = '/auth/'
+    usuario_form = UsuarioForm
+    domicilio_form = DomicilioForm
+    context = {}
+    context['usuario_form'] = usuario_form(prefix='usuario')
+    context['domicilio_form'] = domicilio_form(prefix='domicilio')
 
-    def form_valid(self, form):
-        response = form.signup()
-        if response.status_code == 201:
-            return HttpResponseRedirect(self.get_success_url(username=form.cleaned_data.get('correoElectronico')))
-            return self.form_invalid(form)
-        elif response.status_code == 404:
-            messages.error(self.request, 'Ya hay una cuenta registrada con el correo electronico')
-            return self.form_invalid(form)
+    def get(self, request):
+        return render(request, self.template_name, self.context)
 
-    def form_invalid(self, form):
-        response = super().form_invalid(form)
-        if self.request.accepts('text/html'):
-            return response
+    def post(self, request):
+        usuario_form = UsuarioForm(request.POST, request.FILES, prefix='usuario')
+        if usuario_form.is_valid():
+            domicilio_form = DomicilioForm(request.POST, prefix='domicilio')
+            if domicilio_form.is_valid():
+                response = UserSerializer.register_user(usuario_form.cleaned_data, domicilio_form.cleaned_data)
+                if response.status_code == 201:
+                    messages.success(self.request, 'Tu negocio ha sido registrado correctamente',
+                                     extra_tags='alert alert-success')
+                    return HttpResponseRedirect(
+                        self.get_success_url(username=usuario_form.cleaned_data.get('correo_electronico')))
+                else:
+                    messages.error(self.request, 'Error al registrar', extra_tags='alert alert-danger')
+                    return render(request, self.template_name, self.context)
+            else:
+                messages.warning(self.request, 'Error en el formulario domicilio', extra_tags='alert alert-warning')
+                messages.warning(self.request, domicilio_form.errors, extra_tags='alert alert-warning')
+                return render(request, self.template_name, self.context)
         else:
-            return JsonResponse(form.errors, status=400)
+            print(usuario_form.errors)
+            messages.warning(self.request, 'Error en el formulario usuario', extra_tags='alert alert-warning')
+            messages.warning(self.request, usuario_form.errors, extra_tags='alert alert-warning')
+            return render(request, self.template_name, self.context)
 
     def get_success_url(self, **kwargs):
         return reverse_lazy('auth', kwargs={'username': kwargs['username']})
@@ -126,18 +153,19 @@ class AuthView(FormView):
             return JsonResponse(form.errors, status=400)
 
 
-class MainMenuView(ListView):
+class MainMenuView(View):
     template_name = "main.html"
-    model = Negocio
+    main_form = MainForm
+    context = {}
+    context['main_form'] = main_form
 
     def get(self, request):
-        response = MainForm.get_data(self, 0, 20)
-        return render(request, self.template_name)
+        response = self.context['main_form'].get_data(self, 0, 20)
+        self.context['object_list'] = json.loads(response.content.decode('utf-8'))
+        return render(request, self.template_name, self.context)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        return context
+    def post(self):
+        pass
 
 
 class RegisterBusiness(View):
@@ -146,14 +174,14 @@ class RegisterBusiness(View):
     sucursal_form = SucursalForm
     domicilio_form = DomicilioForm
     horario_form = HorarioGeneralForm
+    context = {}
+    context['negocio_form'] = negocio_form(prefix='negocio')
+    context['sucursal_form'] = sucursal_form(prefix='sucursal')
+    context['domicilio_form'] = domicilio_form(prefix='domicilio')
+    context['horario_form'] = horario_form(prefix='horario')
 
     def get(self, request):
-        context = {}
-        context['negocio_form'] = self.negocio_form(prefix='negocio')
-        context['sucursal_form'] = self.sucursal_form(prefix='sucursal')
-        context['domicilio_form'] = self.domicilio_form(prefix='domicilio')
-        context['horario_form'] = self.horario_form(prefix='horario')
-        return render(request, self.template_name, context)
+        return render(request, self.template_name, self.context)
 
     def post(self, request):
         negocio_form = BusinessForm(request.POST, request.FILES, prefix='negocio')

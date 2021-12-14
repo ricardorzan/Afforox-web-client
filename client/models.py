@@ -29,9 +29,7 @@ class Usuario(models.Model):
     foto_de_perfil = models.ImageField('Foto de perfil', upload_to='profile_pictures', blank=True)
     nombre_completo = models.CharField('Nombre completo', max_length=200)
     telefono = models.CharField('Telefono', max_length=20)
-
     codigo_autenticacion = models.CharField('Código de autenticación', max_length=200)
-    '''domicilio = models.ForeignKey(Domicilio, on_delete=models.CASCADE)'''
 
 
 TIPO = [

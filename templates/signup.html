@@ -5,7 +5,7 @@
     {% block estilos-login %}
         <link rel="stylesheet" href="{% static 'css/signup.css' %}">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/location.js' %}"></script>
     {% endblock %}
     <body>
     <div class="row align-items-stretch">
@@ -16,76 +16,82 @@
             <h3 class="fw-light text-center pb-5">Completa tu registro para crear tu cuenta</h3>
 
             <div class="w-50 d-grid mx-auto d-block mb-5">
-                <label class="form-label">{{ form.fotoPerfil.label }}</label>
-                {{ form.fotoPerfil }}
+                <label class="form-label">{{ usuario_form.foto_de_perfil.label }}</label>
+                {{ usuario_form.foto_de_perfil }}
             </div>
 
             <form method="post" class="w-75 mx-auto mb-5">
                 {% csrf_token %}
                 <div class="row mx-auto mb-3">
                     <div class="col">
-                        <label class="form-label">{{ form.nombreCompleto.label }}</label>
-                        {{ form.nombreCompleto }}
+                        <label class="form-label">{{ usuario_form.nombre_completo.label }}</label>
+                        {{ usuario_form.nombre_completo }}
                     </div>
                     <div class="col">
-                        <label class="form-label">{{ form.correoElectronico.label }}</label>
-                        {{ form.correoElectronico }}
-                    </div>
-                </div>
-                <div class="row mx-auto mb-3">
-                    <div class="col">
-                        <label class="form-label">{{ form.fechaNacimiento.label }}</label>
-                        {{ form.fechaNacimiento }}
-                    </div>
-                    <div class="col">
-                        <label class="form-label">{{ form.edad.label }}</label>
-                        {{ form.edad }}
+                        <label class="form-label">{{ usuario_form.correo_electronico.label }}</label>
+                        {{ usuario_form.correo_electronico }}
                     </div>
                 </div>
                 <div class="row mx-auto mb-3">
                     <div class="col">
-                        <label class="form-label ">{{ form.telefono.label }}</label>
-                        {{ form.telefono }}
+                        <label class="form-label">{{ usuario_form.fecha_de_nacimiento.label }}</label>
+                        {{ usuario_form.fecha_de_nacimiento }}
                     </div>
                     <div class="col">
-                        <label class="form-label ">{{ form.pais.label }}</label>
-                        {{ form.pais }}
-                    </div>
-                </div>
-                <div class="row mx-auto mb-3">
-                    <div class="col">
-                        <label class="form-label ">{{ form.estado.label }}</label>
-                        {{ form.estado }}
-                    </div>
-                    <div class="col">
-                        <label class="form-label ">{{ form.ciudad.label }}</label>
-                        {{ form.ciudad }}
+                        <label class="form-label">{{ usuario_form.edad.label }}</label>
+                        {{ usuario_form.edad }}
                     </div>
                 </div>
                 <div class="row mx-auto mb-3">
                     <div class="col">
-                        <label class="form-label ">{{ form.calle.label }}</label>
-                        {{ form.calle }}
+                        <label class="form-label ">{{ usuario_form.telefono.label }}</label>
+                        {{ usuario_form.telefono }}
                     </div>
                     <div class="col">
-                        <label class="form-label ">{{ form.numeroInterior.label }}</label>
-                        {{ form.numeroInterior }}
+                        <label class="form-label">{{ domicilio_form.pais.label }}</label>
+                        {{ domicilio_form.pais }}
                     </div>
                 </div>
                 <div class="row mx-auto mb-3">
                     <div class="col">
-                        <label class="form-label ">{{ form.numeroExterior.label }}</label>
-                        {{ form.numeroExterior }}
+                        <label class="form-label ">{{ domicilio_form.estado.label }}</label>
+                        {{ domicilio_form.estado }}
                     </div>
                     <div class="col">
-                        <label class="form-label ">{{ form.colonia.label }}</label>
-                        {{ form.colonia }}
+                        <label class="form-label ">{{ domicilio_form.ciudad.label }}</label>
+                        {{ domicilio_form.ciudad }}
+                    </div>
+                </div>
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ domicilio_form.municipio.label }}</label>
+                        {{ domicilio_form.municipio }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ domicilio_form.calle.label }}</label>
+                        {{ domicilio_form.calle }}
+                    </div>
+                </div>
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ domicilio_form.numero_interior.label }}</label>
+                        {{ domicilio_form.numero_interior }}
+                    </div>
+                    <div class="col">
+                        <label class="form-label ">{{ domicilio_form.numero_exterior.label }}</label>
+                        {{ domicilio_form.numero_exterior }}
+                    </div>
+                </div>
+                <div class="row mx-auto mb-3">
+                    <div class="col">
+                        <label class="form-label ">{{ domicilio_form.colonia.label }}</label>
+                        {{ domicilio_form.colonia }}
                     </div>
                 </div>
                 <div class="row mx-auto mb-4">
                     <div class="col">
-                        <label class="form-label ">{{ form.contrasenia.label }}</label>
-                        {{ form.contrasenia }}
+                        <label class="form-label ">{{ usuario_form.contrasenia.label }}</label>
+                        {{ usuario_form.contrasenia }}
                     </div>
                     <div class="col">
                         <label class="form-label ">Confirma tu contraseña</label>
@@ -94,7 +100,7 @@
                 </div>
                 <div class="row mx-auto">
                     {% if messages %}
-                        <ul class="alert alert-danger" style="list-style: none;">
+                        <ul class="alert" style="list-style: none;">
                             {% for message in messages %}
                                 <li
                                         {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}

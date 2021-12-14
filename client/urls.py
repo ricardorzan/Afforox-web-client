@@ -6,11 +6,11 @@ from .views import (
     LogInView,
     MainMenuView,
     AuthView,
-    RegisterBusiness
+    RegisterBusiness, Homepage
 )
 
 urlpatterns = [
-    path('', views.Homepage, name='home'),
+    path('', Homepage.as_view(), name='home'),
     path('about/', views.About, name='about'),
     path('login/', LogInView.as_view(), name='login'),
     path('signup/', AccountCreateView.as_view(), name='signup'),

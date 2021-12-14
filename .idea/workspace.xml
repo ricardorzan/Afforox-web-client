@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
-      <change afterPath="$PROJECT_DIR$/client/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/register_business.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/signup.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register_business.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register_business.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,8 @@
       <workItem from="1639361783130" duration="4504000" />
       <workItem from="1639407467709" duration="2463000" />
       <workItem from="1639415976410" duration="3360000" />
-      <workItem from="1639436206534" duration="9268000" />
+      <workItem from="1639436206534" duration="16494000" />
+      <workItem from="1639499575712" duration="6148000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>
@@ -208,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638057044688</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se agregó Registrar negocio">
+      <created>1639447368384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639447368384</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +240,7 @@
     <MESSAGE value="- Se agregaron los requerimientos" />
     <MESSAGE value="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse" />
     <MESSAGE value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
+    <MESSAGE value="Se agregó Registrar negocio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó Registrar negocio" />
   </component>
 </project>

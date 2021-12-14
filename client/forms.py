@@ -45,32 +45,6 @@ class LogInForm(forms.ModelForm):
         return response
 
 
-class SignUpForm(forms.Form):
-    nombreCompleto = forms.CharField(label='Nombre completo', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    correoElectronico = forms.EmailField(label='Correo electrónico',
-                                         widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    fechaNacimiento = forms.CharField(label='Fecha de nacimiento', widget=DateInput(attrs={'class': 'form-control'}))
-    edad = forms.CharField(widget=forms.NumberInput(attrs={'class': 'form-control', 'min': '0'}))
-    telefono = forms.CharField(label='Télefono',
-                               widget=forms.TextInput(attrs={'class': 'form-control', 'pattern': '[0-9]+'}))
-    pais = forms.CharField(label='País', widget=forms.Select(attrs={'class': 'form-control', 'required': 'true'}))
-    estado = forms.CharField(widget=forms.Select(attrs={'class': 'form-control', 'required': 'true'}))
-    ciudad = forms.CharField(widget=forms.Select(attrs={'class': 'form-control', 'required': 'true'}))
-    calle = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    colonia = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    numeroInterior = forms.CharField(label='Número interior',
-                                     widget=forms.NumberInput(attrs={'class': 'form-control', 'min': '0'}))
-    numeroExterior = forms.CharField(label='Número exterior',
-                                     widget=forms.NumberInput(attrs={'class': 'form-control', 'min': '0'}))
-    contrasenia = forms.CharField(label='Contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-
-    def signup(self):
-        data = self.cleaned_data
-        response = requests.post(API_URL + '/usuarios', data=json.dumps(data, indent=4, sort_keys=True, default=str),
-                                 headers={'Content-Type': 'application/json'})
-        return response
-
-
 class AuthForm(forms.Form):
     codigoAutenticacion = forms.CharField(label='Código de autenticación',
                                           widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -85,6 +59,8 @@ class AuthForm(forms.Form):
 
 
 class MainForm(forms.Form):
+    search = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Negocios'}))
+
     def get_data(self, salto, limite):
         response = requests.get(
             API_URL + '/negocios' + '?salto=' + str(salto) + '&limite=' + str(limite),
@@ -114,7 +90,21 @@ class SucursalForm(forms.ModelForm):
         widgets = {
             'nombre_sucursal': forms.TextInput(attrs={'class': 'form-control'}),
             'telefono': forms.TextInput(attrs={'class': 'form-control', 'pattern': '[0-9]+'}),
-            'aforo_total': forms.NumberInput(attrs={'class': 'form-control', 'min': '0', 'type':'number'})
+            'aforo_total': forms.NumberInput(attrs={'class': 'form-control', 'min': '0', 'type': 'number'})
+        }
+
+
+class UsuarioForm(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        exclude = ['codigo_autenticacion']
+        widgets = {
+            'nombre_completo': forms.TextInput(attrs={'class': 'form-control'}),
+            'correo_electronico': forms.EmailInput(attrs={'class': 'form-control'}),
+            'fecha_de_nacimiento': DateInput(attrs={'class': 'form-control'}),
+            'edad': forms.NumberInput(attrs={'class': 'form-control', 'min': '0'}),
+            'telefono': forms.TextInput(attrs={'class': 'form-control', 'pattern': '[0-9]+'}),
+            'contrasenia': forms.PasswordInput(attrs={'class': 'form-control'})
         }
 
 
