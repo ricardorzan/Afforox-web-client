@@ -18,6 +18,8 @@ from .forms import (
 # Create your views here.
 from django.views import View
 
+from .serializers import BusinessSerializer
+
 
 def Homepage(request):
     return render(request, "home.html")
@@ -112,7 +114,8 @@ class AuthView(FormView):
             messages.error(self.request, 'Codigo de autenticación erroneo', extra_tags='alert alert-danger')
             return self.form_invalid(form)
         elif response.status_code == 404:
-            messages.error(self.request, 'No se ha encontrado un usuario con el correo electronico')
+            messages.error(self.request, 'No se ha encontrado un usuario con el correo electronico',
+                           extra_tags='alert alert-danger')
             return self.form_invalid(form)
 
     def form_invalid(self, form):
@@ -153,14 +156,38 @@ class RegisterBusiness(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
-        negocio_form = BusinessForm(request.POST, prefix='negocio')
+        negocio_form = BusinessForm(request.POST, request.FILES, prefix='negocio')
         if negocio_form.is_valid():
             sucursal_form = SucursalForm(request.POST, prefix='sucursal')
             if sucursal_form.is_valid():
-                horario_form = HorarioGeneralForm(request.POST, prefix='horario')
-                if horario_form.is_valid():
-                    BusinessForm.register_business(sucursal_form, horario_form)
+                domicilio_form = DomicilioForm(request.POST, prefix='domicilio')
+                if domicilio_form.is_valid():
+                    horario_form = HorarioGeneralForm(request.POST, prefix='horario')
+                    if horario_form.is_valid():
+                        response = BusinessSerializer.register_business(negocio_form.cleaned_data,
+                                                                        sucursal_form.cleaned_data,
+                                                                        domicilio_form.cleaned_data,
+                                                                        horario_form.cleaned_data)
+                        if response.status_code == 201:
+                            messages.success(self.request, 'Tu negocio ha sido registrado correctamente',
+                                             extra_tags='alert alert-success')
+                            return HttpResponseRedirect(self.get_success_url())
+                        else:
+                            messages.error(self.request, 'Error al registrar', extra_tags='alert alert-danger')
+                            return self.form_invalid()
+                    else:
+                        messages.warning(self.request, 'Error en el formulario negocio',
+                                         extra_tags='alert alert-warning')
+                        return self.form_invalid()
                 else:
-                    print(horario_form.errors)
+                    messages.warning(self.request, 'Error en el formulario domicilio', extra_tags='alert alert-warning')
+                    return self.form_invalid()
+            else:
+                messages.warning(self.request, 'Error en el formulario sucursal', extra_tags='alert alert-warning')
+                return self.form_invalid()
+        else:
+            messages.warning(self.request, 'Error en el formulario negocio', extra_tags='alert alert-warning')
+            return self.form_invalid()
 
-
+    def get_success_url(self):
+        return reverse_lazy('main')

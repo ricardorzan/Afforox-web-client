@@ -27,20 +27,18 @@
                                     <img class="img-fluid rounded-circle mb-3"
                                          src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="...">
                                 </div>
-                                <!--
                                 <div>
-                                    {{ negocio_form.foto_de_perfil }}
+                                    {{ negocio_form.fotoPerfil }}
                                 </div>
-                                -->
                             </div>
                             <div class="row mx-auto mb-3">
                                 <div class="col">
-                                    <label class="form-label">{{ negocio_form.nombre_negocio.label }}</label>
-                                    {{ negocio_form.nombre_negocio }}
+                                    <label class="form-label">{{ negocio_form.nombreCompleto.label }}</label>
+                                    {{ negocio_form.nombreCompleto }}
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">{{ negocio_form.correo_electronico.label }}</label>
-                                    {{ negocio_form.correo_electronico }}
+                                    <label class="form-label">{{ negocio_form.correoElectronico.label }}</label>
+                                    {{ negocio_form.correoElectronico }}
                                 </div>
                             </div>
                             <div class="row mx-auto mb-3">
@@ -86,8 +84,8 @@
                             </div>
                             <div class="row mx-auto mb-3">
                                 <div class="col">
-                                    <label class="form-label">{{ negocio_form.tipo_de_negocio.label }}</label>
-                                    {{ negocio_form.tipo_de_negocio }}
+                                    <label class="form-label">{{ negocio_form.tipoNegocio.label }}</label>
+                                    {{ negocio_form.tipoNegocio }}
                                 </div>
                             </div>
                         </div>
@@ -136,8 +134,8 @@
                                     {{ domicilio_form.municipio }}
                                 </div>
                                 <div class="col">
-                                    <label class="form-label ">{{ domicilio_form.colonia.label }}</label>
-                                    {{ domicilio_form.colonia }}
+                                    <label class="form-label ">{{ domicilio_form.calle.label }}</label>
+                                    {{ domicilio_form.calle }}
                                 </div>
                             </div>
                             <div class="row mx-auto mb-3">
@@ -148,6 +146,12 @@
                                 <div class="col">
                                     <label class="form-label ">{{ domicilio_form.numero_exterior.label }}</label>
                                     {{ domicilio_form.numero_exterior }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.colonia.label }}</label>
+                                    {{ domicilio_form.colonia }}
                                 </div>
                             </div>
                             <div class="col text-end">

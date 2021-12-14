@@ -13,7 +13,6 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-
                     <div class="row mx-auto">
                         {% if messages %}
                             <ul class="alert alert-danger" style="list-style: none;">

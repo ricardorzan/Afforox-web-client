@@ -97,21 +97,14 @@ class BusinessForm(forms.ModelForm):
         model = Negocio
         exclude = ['usuario']
         widgets = {
-            'correo_electronico': forms.EmailInput(attrs={'class': 'form-control'}),
-            'nombre_negocio': forms.TextInput(attrs={'class': 'form-control'}),
+            'correoElectronico': forms.EmailInput(attrs={'class': 'form-control'}),
+            'nombreCompleto': forms.TextInput(attrs={'class': 'form-control'}),
             'telefono': forms.TextInput(attrs={'class': 'form-control', 'pattern': '[0-9]+'}),
             'whatsapp': forms.TextInput(attrs={'class': 'form-control border-start-0', 'pattern': '[0-9]+'}),
             'facebook': forms.TextInput(attrs={'class': 'form-control border-start-0'}),
             'instagram': forms.TextInput(attrs={'class': 'form-control border-start-0'}),
-            'tipo_de_negocio': forms.Select(choices=TIPO, attrs={'class': 'form-control', 'required': 'true'})
+            'tipoNegocio': forms.Select(choices=TIPO, attrs={'class': 'form-control', 'required': 'true'})
         }
-
-    def register_business(self, sucursal, horario):
-        response = requests.post(
-            url=API_URL+'/negocios',
-            headers={'Content-Type': 'application/json'},
-            data=json.dumps(data, indent=4, sort_keys=True, default=str),
-        )
 
 
 class SucursalForm(forms.ModelForm):
@@ -121,7 +114,7 @@ class SucursalForm(forms.ModelForm):
         widgets = {
             'nombre_sucursal': forms.TextInput(attrs={'class': 'form-control'}),
             'telefono': forms.TextInput(attrs={'class': 'form-control', 'pattern': '[0-9]+'}),
-            'aforo_total': forms.NumberInput(attrs={'class': 'form-control', 'min': '0'})
+            'aforo_total': forms.NumberInput(attrs={'class': 'form-control', 'min': '0', 'type':'number'})
         }
 
 

@@ -47,14 +47,14 @@ TIPO = [
 class Negocio(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     facebook = models.CharField('Facebook', max_length=100)
-    foto_de_perfil = models.ImageField('Foto de perfil', upload_to='profile_pictures', blank=True)
+    fotoPerfil = models.ImageField('Foto de perfil', upload_to='profile_pictures', blank=True)
     instagram = models.CharField('Instagram', max_length=100)
-    nombre_negocio = models.CharField('Nombre', max_length=20)
+    nombreCompleto = models.CharField('Nombre', max_length=20)
     telefono = models.CharField('Telefono', max_length=20)
     whatsapp = models.CharField('WhatsApp', max_length=20)
     negocioid = models.AutoField(primary_key=True)
-    tipo_de_negocio = models.CharField('Tipo de negocio', max_length=20)
-    correo_electronico = models.CharField('Correo electrónico', max_length=200)
+    tipoNegocio = models.CharField('Tipo de negocio', max_length=20)
+    correoElectronico = models.CharField('Correo electrónico', max_length=200)
 
 
 MEDIDAS = [
