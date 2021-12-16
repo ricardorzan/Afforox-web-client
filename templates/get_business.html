@@ -14,7 +14,8 @@
                 <div class="col-md-11 mx-auto">
                     <!-- Profile widget -->
                     <div class="bg-white shadow rounded overflow-hidden">
-                        <div class="px-5 cover bg-black" style="background-image: url('https://dummyimage.com/1920x380/343a40/6c757d')">
+                        <div class="px-5 cover bg-black"
+                             style="background-image: url('https://dummyimage.com/1920x380/343a40/6c757d')">
                             <div class="media align-items-end profile-head">
                                 <!-- Foto de perfil -->
                                 <div class="profile mr-3"><img
@@ -22,8 +23,9 @@
                                         alt="..." width="250" class="rounded-circle mb-2 img-thumbnail">
                                 </div>
                                 <div class=" mb-5">
-                                    <h1 class="mt-0 mb-0"> Nombre </h1>
-                                    <p class="mb-4"><i class="fas fa-map-marker-alt mr-2"></i> Tipo de negocio </p>
+                                    <h1 class="mt-0 mb-0"> {{ negocio.nombre_completo }} </h1>
+                                    <p class="mb-4"><i
+                                            class="fas fa-map-marker-alt mr-2"></i> {{ negocio.tipo_negocio }} </p>
                                 </div>
                             </div>
                         </div>
@@ -34,21 +36,21 @@
                                         <a class="bi-facebook" href="#"></a>
                                     </h5><small
                                         class="text-muted"> <i
-                                        class="fas fa-image mr-1"></i>Facebook</small>
+                                        class="fas fa-image mr-1"></i>{{ negocio.facebook }}</small>
                                 </li>
                                 <li class="list-inline-item">
                                     <h5 class="font-weight-bold mb-0 d-block">
                                         <a class="bi-instagram" href="#"></a>
                                     </h5><small
                                         class="text-muted"> <i
-                                        class="fas fa-user mr-1"></i>Instagram</small>
+                                        class="fas fa-user mr-1"></i>{{ negocio.instagram }}</small>
                                 </li>
                                 <li class="list-inline-item">
                                     <h5 class="font-weight-bold mb-0 d-block">
                                         <a class="bi-whatsapp" href="#"></a>
                                     </h5><small
                                         class="text-muted"> <i
-                                        class="fas fa-user mr-1"></i>Whatsapp</small>
+                                        class="fas fa-user mr-1"></i>{{ negocio.whatsapp }}</small>
                                 </li>
                             </ul>
                         </div>
@@ -68,120 +70,63 @@
                                 <section>
                                     <div class="container px-4 px-lg-5 mt-5">
                                         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
-                                            <!-- for negocio in object_list  -->
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
+                                            {% for sucursal in negocio.sucursales %}
+                                                <div class="col mb-5">
+                                                    <div class="card h-100">
+                                                        <!-- details-->
+                                                        <h5 class=" text-white orange-flag rounded-top py-2 px-4">
+                                                            Sucursal 1</h5>
+                                                        <div class="card-body p-4">
+                                                            <!-- name-->
+                                                            <h2 class="fw-bolder"> {{ sucursal.nombre_sucursal }} </h2>
+                                                            <!-- data-->
+                                                            <h4 class="fw-normal"> {{ sucursal.domicilio.calle }}
+                                                                #{{ sucursal.domicilio.numero_exterior }}
+                                                                {{ sucursal.domicilio.colonia }},
+                                                                {{ sucursal.domicilio.municipio }},
+                                                            </h4>
+                                                            <h5 class="text-muted">
+                                                                {{ sucursal.domicilio.ciudad }},
+                                                                {{ sucursal.domicilio.estado }},
+                                                                {{ sucursal.domicilio.pais }}.
+                                                            </h5>
+                                                            <br>
+                                                            <h4 class="fw-light cerrado">Cerrado</h4>
+                                                            <!-- link -->
+                                                            <a data-toggle="modal" data-target="#exampleModalLong"
+                                                               class="stretched-link"></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <!--  endfor  -->
-                                            <! -- Ejemplos -->
-
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModalLong" tabindex="-1"
+                                                     role="dialog" aria-labelledby="exampleModalLongTitle"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title"
+                                                                    id="exampleModalLongTitle">{{ sucursal.nombre_sucursal }}</h5>
+                                                                <button type="button" class="btn-close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-5">
-                                                <div class="card h-100">
-                                                    <!-- details-->
-                                                    <h5 class=" text-white orange-flag rounded-top py-2 px-4">
-                                                        Sucursal 1</h5>
-                                                    <div class="card-body p-4">
-                                                        <!-- name-->
-                                                        <h2 class="fw-bolder"> Sucursal name </h2>
-                                                        <!-- data-->
-                                                        <h3 class="fw-normal"> Sucursal name </h3>
-                                                        <br>
-                                                        <br>
-                                                        <h4 class="fw-light cerrado">Cerrado</h4>
-                                                        <!-- link -->
-                                                        <a href="#" class="stretched-link"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </section>
@@ -222,9 +167,7 @@
                                                                 instalaciones, desde
                                                                 tu panel de administrador.</p>
                                                         </div>
-
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>

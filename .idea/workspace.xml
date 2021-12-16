@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
-      <change afterPath="$PROJECT_DIR$/static/css/get_business.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/get_business.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/get_business.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_business.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +171,8 @@
       <workItem from="1639530966159" duration="1383000" />
       <workItem from="1639547616704" duration="717000" />
       <workItem from="1639602235840" duration="6664000" />
-      <workItem from="1639614513220" duration="3579000" />
+      <workItem from="1639614513220" duration="4878000" />
+      <workItem from="1639619785784" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>
@@ -222,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639447368384</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth">
+      <created>1639618579258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639618579258</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +247,7 @@
     <MESSAGE value="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse" />
     <MESSAGE value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
     <MESSAGE value="Se agregó Registrar negocio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregó Registrar negocio" />
+    <MESSAGE value="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth" />
   </component>
 </project>

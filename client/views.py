@@ -229,6 +229,15 @@ class RegisterBusiness(View):
 
 class GetBusiness(View):
     template_name = "get_business.html"
+    context = {}
+    context['busines_form'] = BusinessForm
+    context['negocio'] = {}
+
 
     def get(self, request, negocioid):
-        return render(request, self.template_name)
+        response = self.context['busines_form'].get_data(self, negocioid)
+        if response is not None:
+            if response.status_code == 200:
+                self.context['negocio'] = json.loads(response.content.decode('utf-8'))
+        print(self.context['negocio'])
+        return render(request, self.template_name, self.context)

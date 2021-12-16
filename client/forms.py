@@ -59,14 +59,15 @@ class AuthForm(forms.Form):
 
 
 class MainForm(forms.Form):
-    search = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Negocios'}))
+    search = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Negocios'}))
 
     def get_data(self, salto, limite):
         response = None
         try:
             response = requests.get(
-            API_URL + '/negocios' + '?salto=' + str(salto) + '&limite=' + str(limite),
-            headers={'Content-Type': 'application/json'})
+                API_URL + '/negocios' + '?salto=' + str(salto) + '&limite=' + str(limite),
+                headers={'Content-Type': 'application/json'})
         except Exception:
             pass
         return response
@@ -85,6 +86,16 @@ class BusinessForm(forms.ModelForm):
             'instagram': forms.TextInput(attrs={'class': 'form-control border-start-0'}),
             'tipoNegocio': forms.Select(choices=TIPO, attrs={'class': 'form-control', 'required': 'true'})
         }
+
+    def get_data(self, negocio_id):
+        response = None
+        try:
+            response = requests.get(
+                API_URL + f'/negocios/{negocio_id}',
+                headers={'Content-Type': 'application/json'})
+        except Exception:
+            pass
+        return response
 
 
 class SucursalForm(forms.ModelForm):
