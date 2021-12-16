@@ -11,7 +11,7 @@ from .models import (
     Domicilio, Negocio, Sucursal, Horario, TIPO,
 )
 
-API_URL = 'http://192.168.100.8:8080/Afforox'
+API_URL = 'http://127.0.0.8:8080/Afforox'
 
 
 class DateInput(forms.DateInput):
@@ -62,9 +62,13 @@ class MainForm(forms.Form):
     search = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Negocios'}))
 
     def get_data(self, salto, limite):
-        response = requests.get(
+        response = None
+        try:
+            response = requests.get(
             API_URL + '/negocios' + '?salto=' + str(salto) + '&limite=' + str(limite),
             headers={'Content-Type': 'application/json'})
+        except Exception:
+            pass
         return response
 
 

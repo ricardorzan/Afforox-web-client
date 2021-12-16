@@ -95,14 +95,16 @@ class AccountCreateView(View):
     def post(self, request):
         usuario_form = UsuarioForm(request.POST, request.FILES, prefix='usuario')
         if usuario_form.is_valid():
+            username = usuario_form.cleaned_data.get('correo_electronico')
             domicilio_form = DomicilioForm(request.POST, prefix='domicilio')
             if domicilio_form.is_valid():
                 response = UserSerializer.register_user(usuario_form.cleaned_data, domicilio_form.cleaned_data)
                 if response.status_code == 201:
-                    messages.success(self.request, 'Tu negocio ha sido registrado correctamente',
+                    messages.success(self.request, 'Te has registrado correctamente',
                                      extra_tags='alert alert-success')
+                    print(usuario_form.cleaned_data.get('correo_electronico'))
                     return HttpResponseRedirect(
-                        self.get_success_url(username=usuario_form.cleaned_data.get('correo_electronico')))
+                        reverse_lazy('auth', kwargs={'username': username}))
                 else:
                     messages.error(self.request, 'Error al registrar', extra_tags='alert alert-danger')
                     return render(request, self.template_name, self.context)
@@ -158,10 +160,14 @@ class MainMenuView(View):
     main_form = MainForm
     context = {}
     context['main_form'] = main_form
+    context['object_list'] = {}
 
     def get(self, request):
         response = self.context['main_form'].get_data(self, 0, 20)
-        self.context['object_list'] = json.loads(response.content.decode('utf-8'))
+        if response is not None:
+            if response.status_code == 200:
+                self.context['object_list'] = json.loads(response.content.decode('utf-8'))
+        print(self.context['object_list'])
         return render(request, self.template_name, self.context)
 
     def post(self):
@@ -219,3 +225,10 @@ class RegisterBusiness(View):
 
     def get_success_url(self):
         return reverse_lazy('main')
+
+
+class GetBusiness(View):
+    template_name = "get_business.html"
+
+    def get(self, request, negocioid):
+        return render(request, self.template_name)

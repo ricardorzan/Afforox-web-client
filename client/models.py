@@ -38,7 +38,7 @@ TIPO = [
     ('SALONBELLEZA', 'Salón de belleza'),
     ('BARBERIA', 'Barberia'),
     ('GIMNASIO', 'Gimnasio'),
-    ('Otro', 'Otro'),
+    ('OTRO', 'Otro'),
 ]
 
 
@@ -61,7 +61,7 @@ MEDIDAS = [
     ('TRABAJADORESCONPROTECCION', 'Equipo de protección a trabajadores'),
     ('GELDESINFECTANTE', 'Aplicación de gel desinfectante'),
     ('CUBREBOCASOBLIGATORIO', 'Uso obligatorio de cubrebocas a clientes'),
-    ('AGUAYJABONENBAÑOS', 'Sanitarios con agua y jabón'),
+    ('AGUAYJABONENBANIOS', 'Sanitarios con agua y jabón'),
     ('DESINFECCIONDESUPERFICIES', 'Desinfección de superficies'),
     ('ENTRADASYSALIDASSEPARADAS', 'Entrada y salidas separadas'),
     ('SANITIZACIONDELESTABLECIMIENTO', 'Sanitización del establecimiento'),

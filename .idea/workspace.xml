@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
+      <change afterPath="$PROJECT_DIR$/static/css/get_business.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/get_business.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/register_business.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/location.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/signup.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register_business.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register_business.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -75,7 +74,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlserver&#10;postgresql&#10;sqlite" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;sqlite&#10;postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunConfigurationTargetLRU" value="32075ede-c505-4820-8367-e636be4fd0cf/database/&quot;afforox&quot;" />
     <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
@@ -174,6 +173,12 @@
       <workItem from="1639415976410" duration="3360000" />
       <workItem from="1639436206534" duration="16494000" />
       <workItem from="1639499575712" duration="6148000" />
+      <workItem from="1639525752925" duration="862000" />
+      <workItem from="1639527892168" duration="2431000" />
+      <workItem from="1639530966159" duration="1383000" />
+      <workItem from="1639547616704" duration="717000" />
+      <workItem from="1639602235840" duration="6664000" />
+      <workItem from="1639614513220" duration="3579000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>

@@ -4,7 +4,7 @@ import requests
 
 from client.models import Sesion
 
-API_URL = 'http://192.168.100.8:8080/Afforox'
+API_URL = 'http://127.0.0.8:8080/Afforox'
 
 
 class BusinessSerializer():

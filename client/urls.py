@@ -6,7 +6,9 @@ from .views import (
     LogInView,
     MainMenuView,
     AuthView,
-    RegisterBusiness, Homepage
+    RegisterBusiness,
+    Homepage,
+    GetBusiness
 )
 
 urlpatterns = [
@@ -16,5 +18,6 @@ urlpatterns = [
     path('signup/', AccountCreateView.as_view(), name='signup'),
     path('main/', MainMenuView.as_view(), name='main'),
     path('auth/<username>/', AuthView.as_view(), name='auth'),
-    path('register_business/', RegisterBusiness.as_view(), name='register_business')
+    path('register_business/', RegisterBusiness.as_view(), name='register_business'),
+    path('negocios/<int:negocioid>', GetBusiness.as_view(), name='get_business')
 ]
