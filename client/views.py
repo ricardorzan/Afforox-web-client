@@ -267,6 +267,5 @@ class GetBusiness(View):
 
 
 def update_aforo(request, negocioid, action=None):
-
     SucursalForm.update_aforo(negocioid, action)
     return redirect(request.META['HTTP_REFERER'])
