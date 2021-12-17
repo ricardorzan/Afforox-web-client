@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Afforox {% endblock title %}</title>
+    {% block estilos-generales %}
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet"/>
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        {% if username %}
+            <ul class="navbar-nav me-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">☰</a>
+                </li>
+            </ul>
+        {% endif %}
+        <a class="navbar-brand" href="{% url 'home' %}">
+            Afforox
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Suscripciones</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link bi bi-search" href="{% url 'main' %}"></a>
+                </li>
+                {% if username %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> {{ username }}</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Inicar sesión</a>
+                    </li>
+                {% endif %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Español
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Inglés</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock content %}
+{% block scripts-generales %}
+{% endblock %}
+{% block scripts-adicionales %}
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+{% endblock %}
+</body>
+</html>

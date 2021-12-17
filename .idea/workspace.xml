@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Actualizacion para mantener la sesión y en el get negocio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="get_sucursal" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="20WFR9WZIHMzPsgcZY3D6YHx5F3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;sqlite&#10;postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunConfigurationTargetLRU" value="32075ede-c505-4820-8367-e636be4fd0cf/database/&quot;afforox&quot;" />
+    <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="PostgreSQL&#10;TSQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="TSQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/resources" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/resources" />
+      <recent name="$PROJECT_DIR$/static/resources/fonts" />
+      <recent name="$PROJECT_DIR$/static/bootstrap" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/resources/fonts/vag_rounded" />
+      <recent name="$PROJECT_DIR$/static/resources/fonts" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Afforox" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Afforox-web-client" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="" />
+      <created>1636152425443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636152425443</updated>
+      <workItem from="1636152426902" duration="2321000" />
+      <workItem from="1636154763344" duration="5604000" />
+      <workItem from="1636161319482" duration="14244000" />
+      <workItem from="1636176295501" duration="784000" />
+      <workItem from="1636208405369" duration="10000" />
+      <workItem from="1636219194671" duration="454000" />
+      <workItem from="1636387786010" duration="2934000" />
+      <workItem from="1636954452796" duration="4028000" />
+      <workItem from="1636993435624" duration="649000" />
+      <workItem from="1636994097104" duration="10234000" />
+      <workItem from="1637032985002" duration="2038000" />
+      <workItem from="1637879211746" duration="7508000" />
+      <workItem from="1638037588512" duration="3117000" />
+      <workItem from="1638040763977" duration="38000" />
+      <workItem from="1638041359712" duration="16009000" />
+      <workItem from="1638057873958" duration="17000" />
+      <workItem from="1638218060279" duration="1654000" />
+      <workItem from="1638294483917" duration="22000" />
+      <workItem from="1638364317751" duration="1850000" />
+      <workItem from="1638411985962" duration="10000" />
+      <workItem from="1638855094504" duration="1380000" />
+      <workItem from="1638891092790" duration="9584000" />
+      <workItem from="1638901174927" duration="3251000" />
+      <workItem from="1639247965709" duration="22295000" />
+      <workItem from="1639344515309" duration="1024000" />
+      <workItem from="1639345555161" duration="13935000" />
+      <workItem from="1639361783130" duration="4504000" />
+      <workItem from="1639407467709" duration="2463000" />
+      <workItem from="1639415976410" duration="3360000" />
+      <workItem from="1639436206534" duration="16494000" />
+      <workItem from="1639499575712" duration="6148000" />
+      <workItem from="1639525752925" duration="862000" />
+      <workItem from="1639527892168" duration="2431000" />
+      <workItem from="1639530966159" duration="1383000" />
+      <workItem from="1639547616704" duration="717000" />
+      <workItem from="1639602235840" duration="6664000" />
+      <workItem from="1639614513220" duration="4878000" />
+      <workItem from="1639619785784" duration="4212000" />
+      <workItem from="1639632048412" duration="4047000" />
+      <workItem from="1639705780690" duration="8802000" />
+      <workItem from="1639715768844" duration="4266000" />
+    </task>
+    <task id="LOCAL-00001" summary="Primer commit">
+      <created>1636154224406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636154224406</updated>
+    </task>
+    <task id="LOCAL-00002" summary="-Se agregó bootstrap css y js&#10;-Se agregó el Homepage como estructura base">
+      <created>1636175403643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636175403643</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- Se agregaron los requerimientos">
+      <created>1636176528299</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636176528299</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse">
+      <created>1637002373239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637002373239</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
+      <created>1638057044688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638057044688</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Se agregó Registrar negocio">
+      <created>1639447368384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639447368384</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth">
+      <created>1639618579258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639618579258</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Se agregó el consultar negocio por ID">
+      <created>1639624938871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639624938871</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit" />
+    <MESSAGE value="-Se agregó bootstrap css y js&#10;-Se agregó el Homepage como estructura base" />
+    <MESSAGE value="- Se agregaron los requerimientos" />
+    <MESSAGE value="Se incremento la estructura base del proyecto&#10;- Se agregaron modelos para el inicio de sesión y registro&#10;- Se agregaron estilos, fuentes e imagenes a los recursos&#10;- Se agregaron las pantallas para iniciar sesión y registrarse" />
+    <MESSAGE value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
+    <MESSAGE value="Se agregó Registrar negocio" />
+    <MESSAGE value="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth" />
+    <MESSAGE value="Se agregó el consultar negocio por ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó el consultar negocio por ID" />
+  </component>
+</project>

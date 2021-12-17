@@ -1,0 +1,58 @@
+.btn-primary {
+    background-color: #FF9464;
+    border-color: #FF9464;
+    font-family: fontNormalText;
+}
+
+.btn-primary:hover {
+  background-color: #F45F34;
+  border-color: #F45F34;
+}
+
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #F45F34;
+  border-color: #F45F34;
+  box-shadow: 0 0 0 0.25rem #F45F34;
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #F45F34;
+  border-color: #F45F34;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem #FF9464;
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+  background-color: #FF9464;
+  border-color: #FF9464;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #F8FAFC;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

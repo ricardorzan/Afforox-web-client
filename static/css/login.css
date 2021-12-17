@@ -1,0 +1,12 @@
+body {
+    background: #FEE4D4;
+    background: linear-gradient(to right, #FEE4D4, #F9A788);
+}
+
+.left-side {
+
+}
+
+.right-side {
+    background: #FEE4D4;
+}

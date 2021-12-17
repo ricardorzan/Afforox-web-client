@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %} Registrar negocio {% endblock title %}
+{% block content %}
+    {% load static %}
+    {% block estilos-register-business %}
+        <link rel="stylesheet" href="{% static 'css/register_business.css' %}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/location.js' %}"></script>
+    {% endblock %}
+    <body>
+    <div class="row align-items-stretch">
+        <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6">
+        </div>
+        <div class="col bg-white p-4">
+            <h2 class="fw-bold text-center pt-5">Es hora de registrar tu negocio</h2>
+            <h3 class="fw-light text-center pb-5">Ayudanos a conocer mejor tu negocio</h3>
+            <form method="post">
+                <div class="mb-4 container my-auto shadow rounded">
+                    <div class="align-items-center g-5 py-3">
+                        <div class="mb-5">
+                            <h4 class="text-white orange-flag rounded-3 p-2">Datos del negocio</h4>
+                        </div>
+                        <div class="w-75 mx-auto mb-5">
+                            {% csrf_token %}
+                            <div class="align-content-center align-items-center text-center mb-4">
+                                <div class="">
+                                    <img class="img-fluid rounded-circle mb-3"
+                                         src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="...">
+                                </div>
+                                <div>
+                                    {{ negocio_form.fotoPerfil }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ negocio_form.nombreCompleto.label }}</label>
+                                    {{ negocio_form.nombreCompleto }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">{{ negocio_form.correoElectronico.label }}</label>
+                                    {{ negocio_form.correoElectronico }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ negocio_form.telefono.label }}</label>
+                                    {{ negocio_form.telefono }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">{{ negocio_form.whatsapp.label }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="border-end-0 bg-light input-group-text" id="inputGroupPrepend">
+                                                <a class="bi-whatsapp"></a>
+                                            </span>
+                                        </div>
+                                        {{ negocio_form.whatsapp }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ negocio_form.facebook.label }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="border-end-0 bg-light input-group-text" id="inputGroupPrepend">
+                                                <a class="bi-facebook"></a>
+                                            </span>
+                                        </div>
+                                        {{ negocio_form.facebook }}
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label ">{{ negocio_form.instagram.label }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="border-end-0 bg-light input-group-text" id="inputGroupPrepend">
+                                                <a class="bi-instagram"></a>
+                                            </span>
+                                        </div>
+                                        {{ negocio_form.instagram }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ negocio_form.tipoNegocio.label }}</label>
+                                    {{ negocio_form.tipoNegocio }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container my-auto shadow rounded">
+                    <div class="align-items-center g-5 py-3">
+                        <div class="mb-5">
+                            <h4 class="shadow text-white orange-flag rounded-3 p-2">Datos de la primera sucursal</h4>
+                        </div>
+                        <div class="w-75 mx-auto mb-3">
+                            {% csrf_token %}
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ sucursal_form.nombre_sucursal.label }}</label>
+                                    {{ sucursal_form.nombre_sucursal }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">{{ sucursal_form.telefono.label }}</label>
+                                    {{ sucursal_form.telefono }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ sucursal_form.aforo_total.label }}</label>
+                                    {{ sucursal_form.aforo_total }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">{{ domicilio_form.pais.label }}</label>
+                                    {{ domicilio_form.pais }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.estado.label }}</label>
+                                    {{ domicilio_form.estado }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.ciudad.label }}</label>
+                                    {{ domicilio_form.ciudad }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.municipio.label }}</label>
+                                    {{ domicilio_form.municipio }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.calle.label }}</label>
+                                    {{ domicilio_form.calle }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.numero_interior.label }}</label>
+                                    {{ domicilio_form.numero_interior }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.numero_exterior.label }}</label>
+                                    {{ domicilio_form.numero_exterior }}
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label ">{{ domicilio_form.colonia.label }}</label>
+                                    {{ domicilio_form.colonia }}
+                                </div>
+                            </div>
+                            <div class="col text-end">
+                                <label class=" form-label"> Despues podrás agregar mas sucrusales a tu negocio </label>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h4 class="shadow text-white orange-flag rounded-3 p-2">Horarios y capacidad</h4>
+                        </div>
+                        <div class="w-75 mx-auto mb-5">
+                            {% csrf_token %}
+                            <div class="row mx-auto mb-3">
+                                <div class="col-auto">
+                                    <label class="form-label">{{ horario_form.dia.label }}</label>
+                                    {{ horario_form.dia }}
+                                </div>
+                                <div class="col text-end">
+                                    <label class=" form-label"> Despues podrás ajustar los horarios por día </label>
+                                </div>
+                            </div>
+                            <div class="row mx-auto mb-3">
+                                <div class="col">
+                                    <label class="form-label">{{ horario_form.horario_apertura.label }}</label>
+                                    {{ horario_form.horario_apertura }}
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">{{ horario_form.horario_cierre.label }}</label>
+                                    {{ horario_form.horario_cierre }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h4 class="shadow text-white orange-flag rounded-3 p-2">{{ sucursal_form.servicios.label }}
+                                para ofrecer</h4>
+                        </div>
+                        <div class="form-group w-75 mx-auto mb-5 row">
+                            {% csrf_token %}
+                            {% for value, text in sucursal_form.servicios.field.choices %}
+                                <div class="col-6">
+                                    <label class="contenedor">{{ text }}
+                                        <input class="" id="id_providers_{{ forloop.counter0 }}"
+                                               name="{{ sucursal_form.servicios.name }}" type="checkbox"
+                                               value="{{ value }}"
+                                                {% if value in checked_providers %} checked="checked"{% endif %}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-5">
+                            <h4 class="shadow text-white orange-flag rounded-3 p-2">{{ sucursal_form.medidas.label }} de
+                                seguridad sanitarias</h4>
+                        </div>
+                        <div class="w-75 mx-auto mb-5 row">
+                            {% csrf_token %}
+                            {% for value, text in sucursal_form.medidas.field.choices %}
+                                <div class="col-6">
+                                    <label class="contenedor">{{ text }}
+                                        <input class="" id="id_providers_{{ forloop.counter0 }}"
+                                               name="{{ sucursal_form.medidas.name }}" type="checkbox"
+                                               value="{{ value }}"
+                                                {% if value in checked_providers %} checked="checked"{% endif %}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    {% if messages %}
+                        <ul class="alert alert-danger" style="list-style: none;">
+                            {% for message in messages %}
+                                <li
+                                        {% if message.tags %}
+                                            class="{{ message.tags }}" {% endif %}>{{ message }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="row mx-auto mt-5">
+                    <div class="col">
+                        <button type="button" onclick="window.history.go(-1); return false;"
+                                class="btn btn-outline-secondary w-75 float-end ">Regresar
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary w-75">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+{% endblock content %}

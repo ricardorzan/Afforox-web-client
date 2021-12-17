@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %} Cátalogo de negocios{% endblock title %}
+{% block content %}
+    {% load static %}
+    {% block estilos-main %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock %}
+    <body>
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center text-white">
+                        <form class="form-subscribe mt-5" id="contactForm">
+                            <div class="row mx-auto">
+                                {% if messages %}
+                                    <ul class="alert" style="list-style: none;">
+                                        {% for message in messages %}
+                                            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                                                {{ message }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    {{ main_form.search }}
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-auto">
+                <!-- filtros -->
+
+        </div>
+        <div class="col">
+            <section>
+                <div class="container px-4 px-lg-5 mt-5">
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                        {% for negocio in object_list %}
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <!-- image-->
+                                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                         alt="..."/>
+                                    <!-- details-->
+                                    <div class="card-body p-4">
+                                        <!-- name-->
+                                        <h5 class="fw-bolder"> {{ negocio.nombre_completo }}</h5>
+                                        <!-- data-->
+                                        <p class="cerrado">Cerrado</p>
+                                        Capacidad total: 40
+                                        <br>
+                                        Aforo actual: 30
+                                        <!-- link -->
+                                        <a href="{% url 'get_business' negocio.negocio_id %}"
+                                           class="stretched-link"></a>
+                                    </div>
+                                    <!-- actions-->
+                                    <div class="row">
+                                        <div class="col mb-2 ms-4">
+                                            <div class="d-flex content-start text-warning ">
+                                                <a class="bi-star-fill"></a>
+                                                <a class="bi-star-fill"></a>
+                                                <a class="bi-star-fill"></a>
+                                                <a class="bi-star-fill"></a>
+                                                <a class="bi-star"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto me-4">
+                                            <div class="d-flex content-end text-warning">
+                                                <a class="bi-heart-fill"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </body>{% endblock content %}
