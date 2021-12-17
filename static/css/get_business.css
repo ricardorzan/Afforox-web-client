@@ -19,6 +19,14 @@
     color: #FF9E72;
 }
 
+.bi-pencil, .bi-plus-circle {
+    color: white;
+}
+
+.bi:hover {
+    color: #FF9E72;
+}
+
 .nav-tabs a {
     color: #595959;
     padding: 22px 16px;
@@ -30,4 +38,8 @@
 
 .nav-tabs a:hover {
     color: #FF9E72;
+}
+
+.bg-map {
+    background-image: url("../resources/map-example.png");
 }

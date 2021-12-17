@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas">
+    <list default="true" id="7072b86f-c15c-41a4-9849-02620b2a8a65" name="Changes" comment="Se agregó el consultar negocio por ID">
+      <change afterPath="$PROJECT_DIR$/static/resources/map-example.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/get_business.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/get_business.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/get_business.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/get_business.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="set_up" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="PostgreSQL&#10;TSQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="TSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -87,8 +94,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/resources/fonts" />
       <recent name="$PROJECT_DIR$/static/resources" />
+      <recent name="$PROJECT_DIR$/static/resources/fonts" />
       <recent name="$PROJECT_DIR$/static/bootstrap" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$" />
@@ -172,7 +179,10 @@
       <workItem from="1639547616704" duration="717000" />
       <workItem from="1639602235840" duration="6664000" />
       <workItem from="1639614513220" duration="4878000" />
-      <workItem from="1639619785784" duration="3184000" />
+      <workItem from="1639619785784" duration="4212000" />
+      <workItem from="1639632048412" duration="4047000" />
+      <workItem from="1639705780690" duration="8802000" />
+      <workItem from="1639715768844" duration="4266000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1636154224406</created>
@@ -223,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639618579258</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se agregó el consultar negocio por ID">
+      <created>1639624938871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639624938871</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +265,7 @@
     <MESSAGE value="Cambios en los formularios para que coincidieran con los modelos descritos en el api spec y se agregarón pantallas" />
     <MESSAGE value="Se agregó Registrar negocio" />
     <MESSAGE value="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregó la pantalla consultar negocios &#10;Cambios minimos para signup y auth" />
+    <MESSAGE value="Se agregó el consultar negocio por ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó el consultar negocio por ID" />
   </component>
 </project>

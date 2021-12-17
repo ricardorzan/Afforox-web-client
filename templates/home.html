@@ -1,236 +1,244 @@
 {% extends 'base.html' %}
 {% block title %} Afforox {% endblock title %}
 {% block content %}
-{% load static %}
-{% block estilos-home %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-{% endblock %}
-<main>
-    <section class="bg-restaurant py-5 border-bottom">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
-                <div class="col-10 col-sm-8 col-lg-6 ">
-                    <a href="{% url 'signup' %}" class="btn btn-primary btn-lg px-4 me-sm-3">Darme de alta</a>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Gestión segura de aforo sin contacto</h1>
-                    <p class="lead mb-4 text-white"> Control de aforo automático, seguro y en tiempo real para
-                        todo tipo de negocios mediante QR.
-                    </p>
+    {% load static %}
+    {% block estilos-home %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% endblock %}
+    <main>
+        <section class="bg-restaurant py-5 border-bottom">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+                    <div class="col-10 col-sm-8 col-lg-6 ">
+                        <a href="{% url 'signup' %}" class="btn btn-primary btn-lg px-4 me-sm-3">Darme de alta</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Gestión segura de aforo sin contacto</h1>
+                        <p class="lead mb-4 text-white"> Control de aforo automático, seguro y en tiempo real para
+                            todo tipo de negocios mediante QR.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="b-example-divider"></div>
+        <div class="b-example-divider"></div>
 
-    <section class="bg-white py-5 border-bottom">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
+        <section class="bg-white py-5 border-bottom">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <div class="col-lg-auto">
+                            <img class="img-fluid rounded mb-5 mb-lg-0"
+                                 src="https://dummyimage.com/600x400/343a40/6c757d"
+                                 alt="..."/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold lh-1 mb-3">Agiliza los procesos de seguridad en tus
+                            instalaciones</h2>
+                        <p class="lead mb-4">Afforox es una App que se encarga de solucionar de forma ágil y eficaz el
+                            cumplimiento de las normativas y protocolos de prevención frente al COVID-19 relacionadas
+                            con el
+                            aforo.</p>
+                        <p class="lead mb-4">Ahorra tiempo y quebraderos de cabeza con este fácil sistema, que puedes
+                            usar
+                            en
+                            una sola instalación, o en decenas de ellas.</p>
+                        <p class="lead mb-4">Si gestionas instalaciones de gran superficie, Afority está pensada para
+                            ayudarte
+                            en el área de seguridad, sin preocuparte de que se emitan más entradas de las que tu aforo
+                            permite.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="b-example-divider"></div>
+
+        <section class="bg-light py-5 border-bottom">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">¿Qué puedo hacer con Afforox?</h2>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="mb-3 text-center">
+                                    <div class="col-lg-auto">
+                                        <img class="img-fluid rounded mb-5 mb-lg-0"
+                                             src="https://dummyimage.com/200x200/343a40/6c757d"
+                                             alt="..."/>
+                                    </div>
+                                </div>
+                                <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Control
+                                </div>
+                                <div class="col-lg-auto">
+                                    <p class="lead mb-4 text-center">En tiempo real y de manera automática en tus
+                                        instalaciones, desde
+                                        tu panel de administrador.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="mb-3 text-center">
+                                    <div class="col-lg-auto">
+                                        <img class="img-fluid rounded mb-5 mb-lg-0"
+                                             src="https://dummyimage.com/200x200/343a40/6c757d"
+                                             alt="..."/>
+                                    </div>
+                                </div>
+                                <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Acceso
+                                </div>
+                                <div class="col-lg-auto">
+                                    <p class="lead mb-4 text-center">Selecciona tus instalaciones y asígnales un código
+                                        QR
+                                        visible. Restringe accesos o permítelos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="mb-3 text-center">
+                                    <div class="col-lg-auto">
+                                        <img class="img-fluid rounded mb-5 mb-lg-0"
+                                             src="https://dummyimage.com/200x200/343a40/6c757d"
+                                             alt="..."/>
+                                    </div>
+                                </div>
+                                <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">
+                                    Histórico
+                                </div>
+                                <div class="col-lg-auto">
+                                    <p class="lead mb-4 text-center">Consulta gráficos con los días mas saturados en tu
+                                        negocio y demás
+                                        información.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="b-example-divider"></div>
+
+        <section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="text-center">
+                    <h1 class="display-5 fw-bold">¿Para qué tipo de negocio es?</h1>
+                    <div class="col-lg-auto mx-auto">
+                        <p class="fs-5 mb-4">Afforox automatiza y simplifica los procesos de control de aforo de forma
+                            segura en restaurantes, estéticas, gimnasios, barberías, centros de aprendizaje y en todos
+                            aquellos espacions donde sea necesario un control de aforo.</p>
+                    </div>
+                </div>
+                <div class="row gx-5">
                     <div class="col-lg-auto">
-                        <img class="img-fluid rounded mb-5 mb-lg-0"
-                             src="https://dummyimage.com/600x400/343a40/6c757d"
+                        <div class="row gx-5 row-cols-1 row-cols-md-2">
+                            <div class="row gx-5">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                <div class="col-lg-6 order-first order-lg-last">
+                                    <h2 class="h5">Control de visitantes</h2>
+                                    <p class="mb-0">Tendrás disponible de forma online el número de visitantes que hay
+                                        en tu
+                                        instalación.</p>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                                         src="https://dummyimage.com/100x100/343a40/6c757d"
+                                         alt="..."/>
+                                </div>
+                            </div>
+                            <div class="row gx-5 align-items-center">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                <div class="col-lg-6 order-first order-lg-last">
+                                    <h2 class="h5">Control de acceso</h2>
+                                    <p class="mb-0">Tendrás control del aforo con la seguridad de que no se emitan más
+                                        entradas
+                                        que las permitidas.</p>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                                         src="https://dummyimage.com/100x100/343a40/6c757d"
+                                         alt="..."/>
+                                </div>
+                            </div>
+                            <div class="row gx-5 align-items-center">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                <div class="col-lg-6 order-first order-lg-last">
+                                    <h2 class="h5">Base de datos</h2>
+                                    <p class="mb-0">Podrás hacer el seguimiento de los últimos 30 días de tus
+                                        visitantes.</p>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                                         src="https://dummyimage.com/100x100/343a40/6c757d"
+                                         alt="..."/>
+                                </div>
+                            </div>
+                            <div class="row gx-5 align-items-center">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                <div class="col-lg-6 order-first order-lg-last">
+                                    <h2 class="h5">Evita sustos</h2>
+                                    <p class="mb-0">Tendrás justificación de las declaraciones responsables de tus
+                                        visitantes.</p>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <img class="img-fluid rounded mb-5 mb-lg-0"
+                                         src="https://dummyimage.com/100x100/343a40/6c757d"
+                                         alt="..."/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="b-example-divider"></div>
+
+        <section class="bg-white py-5 border-bottom">
+            <div class="container px-5 my-5">
+                <div class="py-5 text-center">
+                    <h1 class="display-5 fw-bold">¿Cómo puedo dar de alta mi negocio?</h1>
+                </div>
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-first order-lg-last ">
+                        <img class="img-fluid rounded mb-5 mb-lg-0 mx-auto d-block"
+                             src="{% static 'resources/logo_afforox.png' %}"
                              alt="..."/>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold lh-1 mb-3">Agiliza los procesos de seguridad en tus instalaciones</h2>
-                    <p class="lead mb-4">Afforox es una App que se encarga de solucionar de forma ágil y eficaz el
-                        cumplimiento de las normativas y protocolos de prevención frente al COVID-19 relacionadas con el
-                        aforo.</p>
-                    <p class="lead mb-4">Ahorra tiempo y quebraderos de cabeza con este fácil sistema, que puedes usar
-                        en
-                        una sola instalación, o en decenas de ellas.</p>
-                    <p class="lead mb-4">Si gestionas instalaciones de gran superficie, Afority está pensada para
-                        ayudarte
-                        en el área de seguridad, sin preocuparte de que se emitan más entradas de las que tu aforo
-                        permite.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="b-example-divider"></div>
-
-    <section class="bg-light py-5 border-bottom">
-        <div class="container px-5 my-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bolder">¿Qué puedo hacer con Afforox?</h2>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card mb-5 mb-xl-0">
-                        <div class="card-body p-5">
-                            <div class="mb-3 text-center">
-                                <div class="col-lg-auto">
-                                    <img class="img-fluid rounded mb-5 mb-lg-0"
-                                         src="https://dummyimage.com/200x200/343a40/6c757d"
-                                         alt="..."/>
-                                </div>
-                            </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Control
-                            </div>
-                            <div class="col-lg-auto">
-                                <p class="lead mb-4 text-center">En tiempo real y de manera automática en tus
-                                    instalaciones, desde
-                                    tu panel de administrador.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card mb-5 mb-xl-0">
-                        <div class="card-body p-5">
-                            <div class="mb-3 text-center">
-                                <div class="col-lg-auto">
-                                    <img class="img-fluid rounded mb-5 mb-lg-0"
-                                         src="https://dummyimage.com/200x200/343a40/6c757d"
-                                         alt="..."/>
-                                </div>
-                            </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Acceso
-                            </div>
-                            <div class="col-lg-auto">
-                                <p class="lead mb-4 text-center">Selecciona tus instalaciones y asígnales un código QR
-                                    visible. Restringe accesos o permítelos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card mb-5 mb-xl-0">
-                        <div class="card-body p-5">
-                            <div class="mb-3 text-center">
-                                <div class="col-lg-auto">
-                                    <img class="img-fluid rounded mb-5 mb-lg-0"
-                                         src="https://dummyimage.com/200x200/343a40/6c757d"
-                                         alt="..."/>
-                                </div>
-                            </div>
-                            <div class="lead text-uppercase fw-bold text-muted text-center afforox-subtitle">Histórico
-                            </div>
-                            <div class="col-lg-auto">
-                                <p class="lead mb-4 text-center">Consulta gráficos con los días mas saturados en tu
-                                    negocio y demás
-                                    información.</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <p class="lead mb-4">1. Crea tu cuenta aquí.</p>
+                        <p class="lead mb-4">2. Da de alta tu negocio e ingresa tus datos de aforo.</p>
+                        <p class="lead mb-4">3. Realiza el pago mediante PayPal o transferencia bancaria.</p>
+                        <p class="lead mb-4">4. Imprime tus códigos QR y ponlos en un lugar visible en tus accesos.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="b-example-divider"></div>
+        <div class="b-example-divider"></div>
 
-    <section class="py-5 border-bottom" id="features">
-        <div class="container px-5 my-5">
-            <div class="text-center">
-                <h1 class="display-5 fw-bold">¿Para qué tipo de negocio es?</h1>
-                <div class="col-lg-auto mx-auto">
-                    <p class="fs-5 mb-4">Afforox automatiza y simplifica los procesos de control de aforo de forma
-                        segura en restaurantes, estéticas, gimnasios, barberías, centros de aprendizaje y en todos
-                        aquellos espacions donde sea necesario un control de aforo.</p>
-                </div>
-            </div>
-            <div class="row gx-5">
-                <div class="col-lg-auto">
-                    <div class="row gx-5 row-cols-1 row-cols-md-2">
-                        <div class="row gx-5">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                            <div class="col-lg-6 order-first order-lg-last">
-                                <h2 class="h5">Control de visitantes</h2>
-                                <p class="mb-0">Tendrás disponible de forma online el número de visitantes que hay en tu
-                                    instalación.</p>
-                            </div>
-                            <div class="col-lg-auto">
-                                <img class="img-fluid rounded mb-5 mb-lg-0"
-                                     src="https://dummyimage.com/100x100/343a40/6c757d"
-                                     alt="..."/>
-                            </div>
-                        </div>
-                        <div class="row gx-5 align-items-center">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                            <div class="col-lg-6 order-first order-lg-last">
-                                <h2 class="h5">Control de acceso</h2>
-                                <p class="mb-0">Tendrás control del aforo con la seguridad de que no se emitan más
-                                    entradas
-                                    que las permitidas.</p>
-                            </div>
-                            <div class="col-lg-auto">
-                                <img class="img-fluid rounded mb-5 mb-lg-0"
-                                     src="https://dummyimage.com/100x100/343a40/6c757d"
-                                     alt="..."/>
-                            </div>
-                        </div>
-                        <div class="row gx-5 align-items-center">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                            <div class="col-lg-6 order-first order-lg-last">
-                                <h2 class="h5">Base de datos</h2>
-                                <p class="mb-0">Podrás hacer el seguimiento de los últimos 30 días de tus
-                                    visitantes.</p>
-                            </div>
-                            <div class="col-lg-auto">
-                                <img class="img-fluid rounded mb-5 mb-lg-0"
-                                     src="https://dummyimage.com/100x100/343a40/6c757d"
-                                     alt="..."/>
-                            </div>
-                        </div>
-                        <div class="row gx-5 align-items-center">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
-                            <div class="col-lg-6 order-first order-lg-last">
-                                <h2 class="h5">Evita sustos</h2>
-                                <p class="mb-0">Tendrás justificación de las declaraciones responsables de tus
-                                    visitantes.</p>
-                            </div>
-                            <div class="col-lg-auto">
-                                <img class="img-fluid rounded mb-5 mb-lg-0"
-                                     src="https://dummyimage.com/100x100/343a40/6c757d"
-                                     alt="..."/>
-                            </div>
-                        </div>
-                    </div>
+        <div class="px-4 py-5 text-center">
+            <div class="py-5">
+                <h1 class="display-5 fw-bold">¿Y cómo lo pueden usar mis usuarios?</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="fs-5 mb-4">Esto es lo mejor de todo. Los usuarios de tu instalación solo tienen que
+                        escanear
+                        el código QR y registrarse en pocos pasos para acceder a tu instalación y adquirir la
+                        entrada.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="b-example-divider"></div>
-
-    <section class="bg-white py-5 border-bottom">
-        <div class="container px-5 my-5">
-            <div class="py-5 text-center">
-                <h1 class="display-5 fw-bold">¿Cómo puedo dar de alta mi negocio?</h1>
-            </div>
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 order-first order-lg-last ">
-                    <img class="img-fluid rounded mb-5 mb-lg-0 mx-auto d-block"
-                         src="{% static 'resources/logo_afforox.png' %}"
-                         alt="..."/>
-                </div>
-                <div class="col-lg-6">
-                    <p class="lead mb-4">1. Crea tu cuenta aquí.</p>
-                    <p class="lead mb-4">2. Da de alta tu negocio e ingresa tus datos de aforo.</p>
-                    <p class="lead mb-4">3. Realiza el pago mediante PayPal o transferencia bancaria.</p>
-                    <p class="lead mb-4">4. Imprime tus códigos QR y ponlos en un lugar visible en tus accesos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="b-example-divider"></div>
-
-    <div class="px-4 py-5 text-center">
-        <div class="py-5">
-            <h1 class="display-5 fw-bold">¿Y cómo lo pueden usar mis usuarios?</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="fs-5 mb-4">Esto es lo mejor de todo. Los usuarios de tu instalación solo tienen que escanear
-                    el código QR y registrarse en pocos pasos para acceder a tu instalación y adquirir la entrada.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="b-example-divider mb-0"></div>
-</main>
+        <div class="b-example-divider mb-0"></div>
+    </main>
 {% endblock content %}
