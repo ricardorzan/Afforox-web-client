@@ -3,7 +3,7 @@ import json
 import requests
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -30,16 +30,28 @@ from .serializers import BusinessSerializer, UserSerializer
 
 class Homepage(View):
     template_name = "home.html"
+    context = {}
 
     def get(self, request):
-        return render(request, self.template_name)
+        if Sesion.token != '':
+            self.context['username'] = Sesion.username
+        return render(request, self.template_name, self.context)
 
     def post(self, request):
         return render(request, self.template_name)
 
 
-def About(request):
-    return render(request, "about.html")
+class About(View):
+    template_name = "about.html"
+    context = {}
+
+    def get(self, request):
+        if Sesion.token != '':
+            self.context['username'] = Sesion.username
+        return render(request, self.template_name, self.context)
+
+    def post(self, request):
+        return render(request, self.template_name, self.context)
 
 
 class LogInView(FormView):
@@ -163,6 +175,8 @@ class MainMenuView(View):
     context['object_list'] = {}
 
     def get(self, request):
+        if Sesion.token != '':
+            self.context['username'] = Sesion.username
         response = self.context['main_form'].get_data(self, 0, 20)
         if response is not None:
             if response.status_code == 200:
@@ -231,13 +245,28 @@ class GetBusiness(View):
     template_name = "get_business.html"
     context = {}
     context['busines_form'] = BusinessForm
+    context['sucursal_form'] = SucursalForm(prefix='sucursal')
+    context['domicilio_form'] = DomicilioForm(prefix='domicilio')
+    context['horario_form'] = HorarioGeneralForm(prefix='horario')
     context['negocio'] = {}
 
-
     def get(self, request, negocioid):
+        if Sesion.token != '':
+            self.context['username'] = Sesion.username
         response = self.context['busines_form'].get_data(self, negocioid)
+
         if response is not None:
             if response.status_code == 200:
                 self.context['negocio'] = json.loads(response.content.decode('utf-8'))
         print(self.context['negocio'])
         return render(request, self.template_name, self.context)
+
+    def post(self, request):
+        print(request.POST)
+        pass
+
+
+def update_aforo(request, negocioid, action=None):
+
+    SucursalForm.update_aforo(negocioid, action)
+    return redirect(request.META['HTTP_REFERER'])

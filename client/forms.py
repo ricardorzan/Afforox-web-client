@@ -108,6 +108,15 @@ class SucursalForm(forms.ModelForm):
             'aforo_total': forms.NumberInput(attrs={'class': 'form-control', 'min': '0', 'type': 'number'})
         }
 
+    def update_aforo(sucursalid, action):
+        print('update')
+        url = API_URL + f'/sucursales/{sucursalid}?action={action}'
+        print(url)
+        response = requests.patch(
+            url,
+            headers={'Content-Type': 'application/json'})
+        return response
+
 
 class UsuarioForm(forms.ModelForm):
     class Meta:

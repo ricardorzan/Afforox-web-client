@@ -7,6 +7,7 @@ from multiselectfield import MultiSelectField
 
 class Sesion:
     token = ''
+    username = ''
 
 
 class Domicilio(models.Model):
